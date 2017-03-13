@@ -49,9 +49,9 @@ var fib = function(n, node){
     node.appendChild(tree.html);
 }
 
-//fib(11,document.body);
+fib(11,document.body);
 
-
+document.body.appendChild(document.createElement("hr"));
 
 //Pell numbers: a(0) = 0, a(1) = 1; for n > 1, a(n) = 2*a(n-1) + a(n-2). 
 
@@ -104,8 +104,10 @@ var pell = function(n, node){
     node.appendChild(tree.html);
 }
 
-//pell(11,document.body);
+pell(11,document.body);
 /////////////////////////////////////////////
+document.body.appendChild(document.createElement("hr"));
+
 
   
 var tribHelper = function(n) {
@@ -144,7 +146,6 @@ var tribHelper = function(n) {
         left.html.style.display = 'inline-block';
         div.appendChild(left.html);
         
-        //middle.html.style.cssFloat = 'none';
         middle.html.style.display = 'inline-block';
         div.appendChild(middle.html);
         
