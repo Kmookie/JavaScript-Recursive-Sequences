@@ -1,9 +1,11 @@
+document.title = "MorgansRecursiveCrazyNess";
 document.body.style.width = '31000px';
 
 var fibHelper = function(n) {
     var value = 0;
     var div = document.createElement('div');
     div.style.padding = '5px';
+    div.style.backgroundColor= 'rgba(255, 0,0,' + 1/n + ')'; 
     if (n<=1){
         if (n===0) {
             value = 0;
@@ -49,9 +51,6 @@ var fib = function(n, node){
     node.appendChild(tree.html);
 }
 
-fib(11,document.body);
-
-document.body.appendChild(document.createElement("hr"));
 
 //Pell numbers: a(0) = 0, a(1) = 1; for n > 1, a(n) = 2*a(n-1) + a(n-2). 
 
@@ -59,6 +58,8 @@ var pellHelper = function(n)   {
     var value = 0;
     var div = document.createElement('div');
     div.style.padding = '5px';
+        div.style.backgroundColor= 'rgba(0, 255,0,' + 1/n + ')'; 
+
     if (n<=1){
         if (n===0) {
             value = 0;
@@ -104,9 +105,7 @@ var pell = function(n, node){
     node.appendChild(tree.html);
 }
 
-pell(11,document.body);
 /////////////////////////////////////////////
-document.body.appendChild(document.createElement("hr"));
 
 
   
@@ -114,6 +113,8 @@ var tribHelper = function(n) {
     var value = 0;
     var div = document.createElement('div');
     div.style.padding = '5px';
+        div.style.backgroundColor= 'rgba(0, 0,255,' + 1/n + ')'; 
+
     if (n<=2){
         if (n===0) {
             value = 0;
@@ -166,8 +167,42 @@ var trib = function(n, node){
     node.appendChild(tree.html);
 }
       
+      
+var fibAnchor = document.createElement('a');
+fibAnchor.href = "https://oeis.org/A000045";
+fibAnchor.textContent = "Fibonacci Sequence Info";
+
+var pellAnchor = document.createElement('a');
+pellAnchor.href = "https://oeis.org/A000045";
+pellAnchor.textContent = "Pell Sequence Info";
+
+var tribAnchor = document.createElement('a');
+tribAnchor.href = "https://oeis.org/A000045";
+tribAnchor.textContent = "Tribonacci Sequence Info";
+
+
+
+document.body.appendChild(fibAnchor);  
+fib(11,document.body);
+document.body.appendChild(document.createElement("hr"));
+ 
+/////// 
+document.body.appendChild(pellAnchor);  
+pell(11,document.body);
+document.body.appendChild(document.createElement("hr"));
+
+document.body.appendChild(tribAnchor);  
 trib(11,document.body);
 
+
+
+
+
+// pell
+//https://oeis.org/A000129
+
+//tri
+//https://oeis.org/A000073
         
         
         
